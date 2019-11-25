@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= "Edit a book"
+  p Enter required fields and submit to update your book.
+  form(method='POST' action='/edit/' + book._id)
+    div(class="form-group")
+      label(class="col-form-label", for='title') Title*:
+      input(class="form-control", type='text', value=book.title, placeholder='Enter your title' name='title' required="true")
+    div(class="form-group")
+      label(class="col-form-label", for='author') Author*:
+      input(class="form-control", type='text', value=book.author, placeholder='author' name='author' required="true")
+    div(class="form-group")
+      label(class="col-form-label", for='description') Description*:
+      textarea(class="form-control", placeholder='Write your description' name='description' required="true") #{book.description}
+
+    button.btn.btn-primary(type='submit') Edit
+    a.btn.btn-danger(href="/books" style="margin-left: 10px") Cancel

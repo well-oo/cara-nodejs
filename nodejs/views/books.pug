@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= "My books"
+  div(class="table-responsive")
+    table(class="table table-hover")
+      thead
+        tr
+          th Title
+          th Author
+          th Description
+          th(class="d-print-none")
+            a(class="btn btn-sm btn-success" href="/add") Add
+      tbody
+        each book in books
+          tr
+            td #{book.title}
+            td #{book.author}
+            td #{book.description}
+            td(class="d-print-none")
+              a(class="btn btn-sm btn-warning" href="/edit/" + book._id) Edit
+              form(method='POST' action='/delete/' + book._id, style='display: inline; margin-left: 10px')
+                button.btn.btn-sm.btn-warning(type='submit') Delete
