@@ -22,6 +22,6 @@ Celui ci a pour but de retourner le nom de la personne ainsi que son message
 
 5) (**Bonus**) Modifier l'handler qui reçoit les messages pour ajouter plusieurs commandes, une commande qui va renommer l'utilisateur("/rename nouveauPseudo") et le notifier seulement lui. Une commande permettant d'envoyer un message privé à un utilisateur via son pseudo sous la forme "/w nom message"
 
-##Aides
+## Aides  
 Pour tester le chat, vous pouvez ouvrir plusieurs onglets pour simuler plusieurs utilisateurs.  
 Regarder la partie client de l'application pour voir ce qui est attendu.  
